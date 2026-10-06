@@ -1,11 +1,9 @@
-/* ---------- THEME: change --accent to re-color everything ---------- */
 :root {
   --bg: #000;
   --accent: #00ff41;
   --text: #b9ffcc;
 }
 
-/* ---------- PAGE: centers the card on screen ---------- */
 body {
   margin: 0;
   min-height: 100vh;
@@ -16,14 +14,12 @@ body {
   font-family: "Courier New", monospace;
 }
 
-/* ---------- MATRIX CANVAS: full screen, behind everything ---------- */
 #matrix {
   position: fixed;
   inset: 0;
   z-index: -1;
 }
 
-/* ---------- CARD: flex row -> [ pfp | content ] ---------- */
 .card {
   display: flex;
   width: 500px;
@@ -41,7 +37,7 @@ body {
   display: flex;
   align-items: center;
   padding-right: 20px;
-  border-right: 2px solid var(--accent);   /* vertical divider */
+  border-right: 2px solid var(--accent);   
 }
 
 .pfp img {
@@ -59,7 +55,6 @@ body {
   border: 2px solid var(--accent);
 }
 
-/* ---------- RIGHT SIDE: flex column -> [ header ] [ contact ] ---------- */
 .content {
   flex: 1;
   display: flex;
@@ -68,13 +63,12 @@ body {
 
 .header {
   padding-bottom: 15px;
-  border-bottom: 2px solid var(--accent);  /* horizontal divider */
+  border-bottom: 2px solid var(--accent);  
 }
 .header h2,
 .header p { margin: 0; }
 .header h2 { color: var(--accent); }
 
-/* ---------- CONTACT: flex row -> text left, icons right ---------- */
 .contact {
   flex: 1;
   display: flex;
@@ -102,14 +96,13 @@ body {
 .icons svg {
   width: 20px;
   height: 20px;
-  fill: currentColor;   /* icon uses the link's text color */
+  fill: currentColor;   
 }
 .icons a:hover {
   background: var(--accent);
   color: var(--bg);
 }
 
-/* ---------- SMALL SCREENS: stack the card ---------- */
 @media (max-width: 520px) {
   .card { flex-direction: column; }
   .pfp {
